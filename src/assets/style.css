@@ -1,0 +1,22 @@
+@layer tailwind-base, primevue, tailwind-utilities;
+
+@layer tailwind-base {
+    @tailwind base;
+}
+
+@layer tailwind-utilities {
+    @tailwind components;
+    @tailwind utilities;
+}
+
+
+:root {
+  --surface-ground: #f5f5f5;
+}
+
+body {
+  background: var(--surface-ground);
+}
+.dark-mode-selector {
+  --surface-ground: #212121;
+}
