@@ -26,16 +26,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import 'transition-style';
-import DarkModeBtn from './components/commons/DarkModeBtn.vue';
+import DarkModeBtn from '@components/commons/DarkModeBtn.vue';
 import { invoke } from '@tauri-apps/api/core';
 
 const greetingJs = ref('Cargando/Loading...');
 const info = ref('Cargando/Loading...');
-invoke('greet', { name: 'World' }).then((greeting: string) => {
+invoke<string>('greet', { name: 'World' }).then((greeting: string) => {
   greetingJs.value = greeting;
 });
 
-invoke('info').then((data: string) => {
+invoke<string>('info').then((data: string) => {
   info.value = data;
 });
 
