@@ -19,6 +19,9 @@ export default defineConfig(async () => ({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)), // Alias para src
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)), // Alias para componentes
+      '@layouts': fileURLToPath(new URL('./src/layouts', import.meta.url)),
+      '@views': fileURLToPath(new URL('./src/views', import.meta.url)),
+      '@stores': fileURLToPath(new URL('./src/stores', import.meta.url)), // Alias para stores
     },
   },
 
