@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    tasktix_lib::run()
+    plantilla_base_lib::run()
 }

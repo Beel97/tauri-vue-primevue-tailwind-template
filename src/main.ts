@@ -7,6 +7,9 @@ import 'primeicons/primeicons.css';
 import router from './router/index';
 const app = createApp(App);
 import { createPinia } from 'pinia';
+import { invoke } from '@tauri-apps/api/core'
+
+window.invoke = invoke
 
 app.use(PrimeVue, primevueConfigs)
   .use(router)
